@@ -1,0 +1,620 @@
+   
+    body {
+   
+    padding:0;
+    margin:0;
+    background-image:url('https://78.media.tumblr.com/b41381a138008fc321e4a78288e313fe/tumblr_p49svx8rDt1wvfl2so1_r1_1280.png');
+    background-position: bottom;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+    background-size: cover;
+}
+ 
+@font-face
+{ font-family: "corals"; src: url('https://dl.dropboxusercontent.com/s/8ppkpi4qrpd0zfq/TT%20Corals%20Thin-DEMO.otf') ;}
+ 
+.topnav {
+  overflow: hidden;
+  background-color: #fefefe;
+  border-bottom:2px solid black;
+    opacity: .7;
+}
+ 
+.topnav a {
+  float: left;
+  display: block;
+  color: #1d1d1d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15.5px;
+}
+ 
+.topnav a:hover {
+  color: #d7d7d7;
+   -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+}
+ 
+ 
+.topnav .icon {
+  display: none;
+}
+ 
+ 
+main.main-images {
+   
+    display:none;
+   
+}
+ 
+main.main-images img {
+   
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+ 
+.grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+}
+ 
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 4% -.5% -3.5%;
+    /* min-width: 320px; */
+    max-width: 99%;
+    max-height: 500px;
+    width: 100%;
+    background: #3085a3;
+    text-align: center;
+    border:10px solid black;
+    /* cursor: pointer; */
+ 
+}
+ 
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+}
+ 
+.grid figure figcaption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+ 
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+ 
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+ 
+/* Anchor will cover the whole item by default */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+ 
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+}
+ 
+.grid figure h2 span {
+    font-weight: 800;
+}
+ 
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+ 
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+ 
+figure.effect-marley {
+   
+    background: #2982e6;
+   
+}
+ 
+figure.effect-marley img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+ 
+figure.effect-marley:hover img {
+    opacity: 0.4;
+}
+ 
+figure.effect-marley figcaption {
+    text-align: right;
+    color:white;
+}
+ 
+figure.effect-marley h2,
+figure.effect-marley p {
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+}
+ 
+figure.effect-marley p {
+    bottom: 30px;
+    line-height: 1.5;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+    font-family: 'Roboto', sans-serif;
+ 
+}
+ 
+figure.effect-marley h2 {
+    top: 30px;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+    font-family: "corals";
+}
+ 
+figure.effect-marley:hover h2 {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-marley h2::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    content: '';
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+ 
+figure.effect-marley h2::after,
+figure.effect-marley p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+ 
+figure.effect-marley:hover h2::after,
+figure.effect-marley:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-romeo {
+    background: #e09c68;
+}
+ 
+figure.effect-romeo img {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.4,1.4,1);
+    transform: scale3d(1.4,1.4,1);
+}
+ 
+figure.effect-romeo:hover img {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    transform: translate3d(1,1,1);
+}
+ 
+figure.effect-romeo figcaption::before,
+figure.effect-romeo figcaption::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+ 
+figure.effect-romeo:hover figcaption::before {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(45deg);
+    transform: translate3d(-50%,-50%,0) rotate(45deg);
+}
+ 
+figure.effect-romeo:hover figcaption::after {
+    opacity: 0.5;
+    -webkit-transform: translate3d(-50%,-50%,0) rotate(-45deg);
+    transform: translate3d(-50%,-50%,0) rotate(-45deg);
+}
+ 
+figure.effect-romeo h2,
+figure.effect-romeo p {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    font-family: 'Roboto', sans-serif;
+ 
+}
+ 
+figure.effect-romeo h2 {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-150%,0);
+    font-family: "corals";
+}
+ 
+figure.effect-romeo p {
+    padding: 0.25em 2em;
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,150%,0);
+}
+ 
+figure.effect-romeo:hover h2 {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
+}
+ 
+figure.effect-romeo:hover p {
+    -webkit-transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+    transform: translate3d(0,-50%,0) translate3d(0,100%,0);
+}
+ 
+figure.effect-bubba {
+    background: #4e009c;
+}
+ 
+figure.effect-bubba img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+ 
+figure.effect-bubba:hover img {
+    opacity: 0.4;
+}
+ 
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+ 
+figure.effect-bubba figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+ 
+figure.effect-bubba figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+ 
+figure.effect-bubba h2 {
+    padding-top: 28%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+    font-family: "corals";
+}
+ 
+figure.effect-bubba p {
+    padding: 0px 0.5em;
+    margin-top: -4px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+    font-family: 'Roboto', sans-serif;
+ 
+}
+ 
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+ 
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-roxy {
+    background: -webkit-linear-gradient(45deg, #ea3f3f 0%,#05abe0 100%);
+    background: linear-gradient(45deg, #ea3f3f 0%,#05abe0 100%);
+}
+ 
+figure.effect-roxy img {
+    max-width: none;
+    width: -webkit-calc(100% + 60px);
+    width: calc(100% + 60px);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50px,0,0);
+    transform: translate3d(-50px,0,0);
+}
+ 
+figure.effect-roxy figcaption::before {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    bottom: 50px;
+    left: 10px;
+    border: 1px solid #fff;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-20px,0,0);
+    transform: translate3d(-20px,0,0);
+}
+ 
+figure.effect-roxy figcaption {
+    padding: 1em;
+    text-align: left;
+}
+ 
+figure.effect-roxy h2 {
+    padding: 26% 0 10px 0;
+    font-family: "corals";
+}
+ 
+figure.effect-roxy p {
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-10px,0,0);
+    transform: translate3d(-10px,0,0);
+    font-family: 'Roboto', sans-serif;
+ 
+}
+ 
+figure.effect-roxy:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-roxy:hover figcaption::before,
+figure.effect-roxy:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-layla {
+    background: #246330;
+}
+ 
+figure.effect-layla figcaption {
+    padding: 1em;
+}
+ 
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+ 
+figure.effect-layla figcaption::before {
+    top: 15px;
+    right: 29px;
+    bottom: 55px;
+    left: 4px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+ 
+figure.effect-layla figcaption::after {
+    top: 6px;
+    right: 65px;
+    bottom: 41px;
+    left: 25px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+ 
+figure.effect-layla h2 {
+    padding-top: 26%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+ 
+figure.effect-layla p {
+    padding: 0.5em 2em;
+    text-transform:uppercase!important;
+    text-transform: none;
+    opacity: 0;
+    -webkit-transform: translate3d(0,-10px,0);
+    transform: translate3d(0,-10px,0);
+    font-family: 'Roboto', sans-serif;
+ 
+}
+ 
+figure.effect-layla img,
+figure.effect-layla h2 {
+    -webkit-transform: translate3d(0,-30px,0);
+    transform: translate3d(0,0px,0);
+    font-family: "corals";
+}
+ 
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+ 
+figure.effect-layla:hover img {
+    opacity: 0.7;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+ 
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+ 
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+}
+ 
+/* Media Query Stuff */
+ 
+ 
+@media only screen and (max-width:1366px)
+   
+{
+   
+    main.main-images img {
+   
+    width:100%
+   
+}
+   
+}
+ 
+ 
+@media only screen and (max-width:1920px)
+   
+{
+   
+    main.main-images img {
+   
+    width:100%
+   
+}
+ 
+   
+}
+ 
+@media only screen and (max-width:1440px)
+   
+{
+   
+    main.main-images img {
+   
+    width:100%
+   
+}
+ 
+}
+ 
+@media only screen and (max-width:1280px)
+   
+{
+   
+    main.main-images img {
+   
+    width:100%
+   
+}
+   
+}
+ 
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+ 
+@media screen and (max-width: 768px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+   
+    .grid figure figcaption {
+        display:none;
+       
+    }
+   
+}
